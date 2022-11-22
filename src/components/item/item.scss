@@ -1,0 +1,32 @@
+$black: black;
+
+@mixin item-style($background-color, $color) {
+  padding: 5px;
+  border: 1px solid $black;
+  margin-top: 2px;
+  cursor: pointer;
+  background-color: $background-color;
+  color: $color;
+  transition: all 0.3s;
+}
+
+.item {
+  @include item-style(rgb(190, 190, 190), aliceblue);
+}
+
+.item:hover {
+  background-color: $black;
+  transition: all 0.3s;
+}
+
+.active-item {
+  @include item-style($black, rgb(255, 246, 194));
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.placeholder {
+  font-weight: 300;
+}
